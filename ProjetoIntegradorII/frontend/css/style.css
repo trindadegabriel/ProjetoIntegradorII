@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    color: #222;
+}
+
+header {
+    background: #b3261e;
+    color: #fff;
+    padding: 16px 24px;
+}
+
+header h1 { margin: 0; font-size: 1.4rem; }
+
+nav {
+    background: #7a1a15;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    display: inline-block;
+}
+
+nav a:hover { background: #5e130f; }
+
+main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #b3261e;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+button:hover { background: #8f1e18; }
+
+button.secundario { background: #555; }
+button.secundario:hover { background: #333; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; font-size: 0.9rem; }
+th { background: #f0f0f0; }
+
+.badge { padding: 3px 8px; border-radius: 12px; color: #fff; font-size: 0.75rem; }
+.badge.vermelho { background: #c0392b; }
+.badge.laranja  { background: #e67e22; }
+.badge.amarelo  { background: #f1c40f; color: #333; }
+.badge.verde    { background: #27ae60; }
+.badge.azul     { background: #2980b9; }
+
+.mensagem { margin-top: 12px; padding: 10px; border-radius: 4px; }
+.mensagem.sucesso { background: #d4edda; color: #155724; }
+.mensagem.erro { background: #f8d7da; color: #721c24; }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Triagem — Pronto Socorro</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h1>Sistema de Atendimentos de Pronto Socorro</h1></header>
+<nav>
+    <a href="index.html">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="medico.html">Painel do Médico</a>
+</nav>
+<main>
+    <div class="card">
+        <h2>Triagem de Enfermagem</h2>
+        <label>Número do atendimento *</label>
+        <input type="text" id="numero_atendimento" placeholder="AT0001">
+        <button id="btn-buscar">Buscar atendimento</button>
+        <div id="dados-paciente"></div>
+    </div>
+
+    <div class="card" id="card-triagem" style="display:none;">
+        <h2>Dados da Triagem</h2>
+        <form id="form-triagem">
+            <label>Pressão arterial</label>
+            <input type="text" id="pressao_arterial" placeholder="120/80">
+
+            <label>Temperatura corporal (°C)</label>
+            <input type="number" step="0.1" id="temperatura_corporal">
+
+            <label>Batimentos cardíacos (bpm)</label>
+            <input type="number" id="batimentos_cardiacos">
+
+            <label>Principais queixas</label>
+            <textarea id="queixas" rows="3" placeholder="Dor de cabeça, náusea, dor muscular..."></textarea>
+
+            <label>Classificação de Manchester *</label>
+            <select id="classificacao_manchester" required>
+                <option value="">Selecione</option>
+                <option value="vermelho">Vermelho — Emergência</option>
+                <option value="laranja">Laranja — Muito urgente</option>
+                <option value="amarelo">Amarelo — Urgente</option>
+                <option value="verde">Verde — Pouco urgente</option>
+                <option value="azul">Azul — Não urgente</option>
+            </select>
+
+            <button type="submit">Confirmar triagem</button>
+        </form>
+        <div id="mensagem-triagem"></div>
+    </div>
+</main>
+<script src="js/triagem.js"></script>
+</body>
+</html>

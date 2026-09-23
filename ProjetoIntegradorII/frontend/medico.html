@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Painel do Médico — Pronto Socorro</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h1>Sistema de Atendimentos de Pronto Socorro</h1></header>
+<nav>
+    <a href="index.html">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="medico.html">Painel do Médico</a>
+</nav>
+<main>
+    <div class="card">
+        <h2>Painel de Atendimentos</h2>
+        <p>Fila ordenada pela classificação do Protocolo de Manchester.</p>
+        <table>
+            <thead>
+                <tr><th>Nº</th><th>Paciente</th><th>Nascimento</th><th>Classificação</th><th>Ação</th></tr>
+            </thead>
+            <tbody id="tabela-painel"></tbody>
+        </table>
+    </div>
+
+    <div class="card" id="card-atendimento" style="display:none;">
+        <h2>Atendimento <span id="numero-atual"></span></h2>
+        <div id="detalhes-atendimento"></div>
+
+        <label>Medicações</label>
+        <textarea id="medicacoes" rows="3" placeholder="Descreva as medicações administradas/prescritas"></textarea>
+        <button id="btn-salvar-medicacoes">Salvar medicações</button>
+        <button id="btn-confirmar" class="secundario">Confirmar atendimento</button>
+
+        <div id="mensagem-medico"></div>
+    </div>
+</main>
+<script src="js/medico.js"></script>
+</body>
+</html>

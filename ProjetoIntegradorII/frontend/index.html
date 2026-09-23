@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Recepção — Pronto Socorro</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><h1>Sistema de Atendimentos de Pronto Socorro</h1></header>
+<nav>
+    <a href="index.html">Recepção</a>
+    <a href="triagem.html">Triagem</a>
+    <a href="medico.html">Painel do Médico</a>
+</nav>
+<main>
+    <div class="card">
+        <h2>Novo Atendimento</h2>
+        <form id="form-recepcao">
+            <label>Nome completo *</label>
+            <input type="text" id="nome_completo" required>
+
+            <label>Data de nascimento *</label>
+            <input type="date" id="data_nascimento" required>
+
+            <label>CPF *</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+
+            <label>RG</label>
+            <input type="text" id="rg">
+
+            <label>Endereço</label>
+            <input type="text" id="endereco">
+
+            <label>Nome do pai</label>
+            <input type="text" id="nome_pai">
+
+            <label>Nome da mãe</label>
+            <input type="text" id="nome_mae">
+
+            <button type="submit">Registrar atendimento</button>
+        </form>
+        <div id="mensagem-recepcao"></div>
+    </div>
+
+    <div class="card">
+        <h2>Atendimentos</h2>
+        <label>Buscar por número do atendimento</label>
+        <input type="text" id="busca-numero" placeholder="AT0001">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº</th><th>Paciente</th><th>Status</th><th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-atendimentos"></tbody>
+        </table>
+    </div>
+</main>
+<script src="js/recepcao.js"></script>
+</body>
+</html>
